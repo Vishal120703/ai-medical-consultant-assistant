@@ -6,7 +6,7 @@ Monorepo structure for the PractoHealth platform.
 
 ```
 ├── client/     # React frontend (Vite + Tailwind)
-└── server/     # Backend API (add later)
+└── server/     # Backend API (ExpressJs)
 ```
 
 ## Client (frontend)
@@ -20,5 +20,3 @@ npm run dev
 Open [http://localhost:5173](http://localhost:5173)
 
 ## Server (backend)
-
-Add your backend in the `server/` folder when ready.

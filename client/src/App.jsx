@@ -1,13 +1,18 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/Layout'
 import HomePage from './pages/HomePage'
+import AuthPage from './pages/AuthPage'
 import PlaceholderPage from './pages/PlaceholderPage'
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Layout>
-        <Routes>
+      <Routes>
+        {/* Full-screen pages (no header/footer) */}
+        <Route path="/login" element={<AuthPage />} />
+
+        {/* Pages with header/footer */}
+        <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/doctors" element={<PlaceholderPage title="Find Doctors" />} />
           <Route path="/appointments" element={<PlaceholderPage title="Appointments" />} />
@@ -20,8 +25,8 @@ export default function App() {
           <Route path="/terms" element={<PlaceholderPage title="Terms of Service" />} />
           <Route path="/for-doctors" element={<PlaceholderPage title="For Doctors" />} />
           <Route path="/app" element={<PlaceholderPage title="Mobile App" />} />
-        </Routes>
-      </Layout>
+        </Route>
+      </Routes>
     </BrowserRouter>
   )
 }

@@ -28,7 +28,3 @@ export const footerLinks = {
     { label: 'Mobile App', href: '/app' },
   ],
 }
-
-export const authenticationLinks= {
-  
-}
